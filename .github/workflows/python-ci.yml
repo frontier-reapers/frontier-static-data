@@ -29,6 +29,6 @@ jobs:
       run: poetry install --no-interaction
     - name: Run tests
       run: |
-        poetry run pytest
-        coverage report
+        poetry run coverage run -m pytest tests
+        poetry run coverage report
 
