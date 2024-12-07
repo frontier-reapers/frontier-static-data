@@ -1,0 +1,18 @@
+[tool.poetry]
+name = "static-data"
+version = "0.1.0"
+description = ""
+authors = ["Scetrov <git@scetrov.live>"]
+readme = "README.md"
+
+[tool.poetry.dependencies]
+python = "^3.12"
+pytest = "^8.3.4"
+
+
+[tool.poetry.group.dev.dependencies]
+pytest-watch = "^4.2.0"
+
+[build-system]
+requires = ["poetry-core"]
+build-backend = "poetry.core.masonry.api"
