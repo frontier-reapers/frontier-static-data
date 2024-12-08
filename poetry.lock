@@ -107,6 +107,24 @@ files = [
 ]
 
 [[package]]
+name = "jsonpickle"
+version = "4.0.0"
+description = "jsonpickle encodes/decodes any Python object to/from JSON"
+optional = false
+python-versions = ">=3.8"
+files = [
+    {file = "jsonpickle-4.0.0-py3-none-any.whl", hash = "sha256:53730b9e094bc41f540bfdd25eaf6e6cf43811590e9e1477abcec44b866ddcd9"},
+    {file = "jsonpickle-4.0.0.tar.gz", hash = "sha256:fc670852b204d77601b08f8f9333149ac37ab6d3fe4e6ed3b578427291f63736"},
+]
+
+[package.extras]
+cov = ["pytest-cov"]
+dev = ["black", "pyupgrade"]
+docs = ["furo", "rst.linker (>=1.9)", "sphinx (>=3.5)"]
+packaging = ["build", "setuptools (>=61.2)", "setuptools-scm[toml] (>=6.0)", "twine"]
+testing = ["PyYAML", "atheris (>=2.3.0,<2.4.0)", "bson", "ecdsa", "feedparser", "gmpy2", "numpy", "pandas", "pymongo", "pytest (>=6.0,!=8.1.*)", "pytest-benchmark", "pytest-benchmark[histogram]", "pytest-checkdocs (>=1.2.3)", "pytest-enabler (>=1.0.1)", "pytest-ruff (>=0.2.1)", "scikit-learn", "scipy", "scipy (>=1.9.3)", "simplejson", "sqlalchemy", "ujson"]
+
+[[package]]
 name = "packaging"
 version = "24.2"
 description = "Core utilities for Python packages"
@@ -213,4 +231,4 @@ watchmedo = ["PyYAML (>=3.10)"]
 [metadata]
 lock-version = "2.0"
 python-versions = "^3.12"
-content-hash = "51a2ef2e3a8b49c31ea8ec1f238346467bf4ba00634b4bd941b548d150fd118e"
+content-hash = "16dd9f6e932ce6fde2c2dd04a958f77639f0fe5d238761d1afadb17a6470f591"

@@ -7,12 +7,12 @@ readme = "README.md"
 
 [tool.poetry.dependencies]
 python = "^3.12"
-pytest = "^8.3.4"
-
+jsonpickle = "^4.0.0"
 
 [tool.poetry.group.dev.dependencies]
 pytest-watch = "^4.2.0"
 coverage = "^7.6.9"
+pytest = "^8.3.4"
 
 [build-system]
 requires = ["poetry-core"]

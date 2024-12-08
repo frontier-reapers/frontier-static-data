@@ -9,7 +9,7 @@ import utils
 class TestUtils(unittest.TestCase):
 
     def test_get_index_files(self):
-        indexFiles = utils.get_index_files()
+        indexFiles = utils.get_indexfiles()
         self.assertEqual(len(indexFiles), 2)
 
     def test_find_resfile(self):
@@ -22,6 +22,7 @@ class TestUtils(unittest.TestCase):
         result = utils.find_resfile(testData, 'res:test1', indexFiles)
         self.assertEqual(result.res, '9a/9a04912e76b0add4_2bc9040fc690a2509cfb0d9ddbeacd11')
         self.assertEqual(result.index, 'res_index1')
+        self.assertEqual(result.filepath, os.path.join(testData, '9a/9a04912e76b0add4_2bc9040fc690a2509cfb0d9ddbeacd11'))
 
     def test_find_resfile_second_file(self):
         indexFiles = list()
@@ -33,6 +34,7 @@ class TestUtils(unittest.TestCase):
         result = utils.find_resfile(testData, 'res:test2', indexFiles)
         self.assertEqual(result.res, '9b/9b2a8aee52be2cb6_006b54687f9d4f70c47ace00247d5405')
         self.assertEqual(result.index, 'res_index2')
+        self.assertEqual(result.filepath, os.path.join(testData, '9b/9b2a8aee52be2cb6_006b54687f9d4f70c47ace00247d5405'))
 
     def test_find_resfile_no_match(self):
         indexFiles = list()
