@@ -16,9 +16,12 @@ args = parser.parse_args()
 indexFiles = utils.get_indexfiles()
 result = utils.find_resfile(args.root, 'res:/staticdata/starmapcache.pickle', indexFiles)
 
+jsonpickle.set_encoder_options('json', sort_keys=True, indent=4)
+
 with open(result.filepath, 'rb') as file:
     data = pickle.load(file)
     json_data = jsonpickle.encode(data)
 
 with open(args.output, 'w') as json_file:
-    json.dump(json_data, json_file, indent=4)
+    json_file.write(json_data)
+    json_file.write('\n')
