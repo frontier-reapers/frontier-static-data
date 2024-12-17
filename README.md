@@ -12,8 +12,12 @@ You will need to create a new venv to run the commands, the easiest way to do th
 ```
 git clone https://github.com/frontier-reapers/frontier-static-data.git
 cd frontier-static-data
+poetry install
 poetry shell
 ```
+
+> [!NOTE]
+> The examples below assume Windows Subsystem for Linix (WSL) is in use so the `C:` drive is mounted on `/mnt/c`. If using a Mac or Windows adjust the paths for your operating system. i.e. `"C:\CCP\EVE Frontier\ResFiles\"`.
 
 ## Commands
 
@@ -29,7 +33,7 @@ Finds a ResFile in the CCP static data.
 ##### Find the Star Map
 
 ```
-./get_resfile.py --root /mnt/c/CCP/Project\ Awakening/ResFiles --file res:/staticdata/starmapcache.pickle
+poetry run ./static_data/get_resfile.py --root /mnt/c/CCP/Project\ Awakening/ResFiles --file res:/staticdata/starmapcache.pickle
 ```
 
 ```
@@ -48,5 +52,5 @@ Exports the `starmapcache.pickle` to a file.
 #### Examples
 
 ```
-./export_starmap.py --root /mnt/c/CCP/EVE\ Frontier/ResFiles/ --output ./starmap.json
+poetry run ./static_data/export_starmap.py --root /mnt/c/CCP/EVE\ Frontier/ResFiles/ --output ./starmap.json
 ```
